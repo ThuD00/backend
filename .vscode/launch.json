@@ -1,0 +1,45 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-KokeiluApplication<kokeilu>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "hh.backend.kokeilu.KokeiluApplication",
+            "projectName": "kokeilu",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ControllerApplication<controller>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "c11.controller.ControllerApplication",
+            "projectName": "controller",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ThymeleafApplication<thymeleaf>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "c21.thymeleaf.ThymeleafApplication",
+            "projectName": "thymeleaf",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=60655 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=thymeleaf"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ListhandlingApplication<listhandling>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "c22.listhandling.ListhandlingApplication",
+            "projectName": "listhandling",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

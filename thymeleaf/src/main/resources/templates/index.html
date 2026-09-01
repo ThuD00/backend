@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Index</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+                                    //literal substitutional
+		<div th:if="${age > 17}" th:text="|Welcome ${name}!|">
+            <!-- Welcome <span th:text="${name}"></span>!, toinen tapa-->
+        </div>
+        <div th:unless="${age > 17}">
+            You are too young!
+        </div>
+	</body>
+</html>
