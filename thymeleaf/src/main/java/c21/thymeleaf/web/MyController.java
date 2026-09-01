@@ -10,10 +10,12 @@ public class MyController {
     @GetMapping("/hello")
     public String hello (
         @RequestParam(name = "name") String PersonName,
+        //url:n parametri age
         @RequestParam(value = "age") int PersonAge, Model model) {
             //tapa siirtää dataa Controllista HTML-sivulle
             //reppu, johon Controller pakkaa tiedot HTML-sivua varten
             model.addAttribute("name", PersonName);
+            //model map keyword age, PersonAge = Java-kielen muuttuja
             model.addAttribute("age", PersonAge);
             return "index";
     }
