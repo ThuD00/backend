@@ -50,6 +50,16 @@
             "projectName": "autolomake",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-KaverilomakeApplication<kaverilomake>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "c23.kaverilomake.KaverilomakeApplication",
+            "projectName": "kaverilomake",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
