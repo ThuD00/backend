@@ -40,6 +40,16 @@
             "projectName": "listhandling",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AutolomakeApplication<autolomake>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "hh.backend.autolomake.AutolomakeApplication",
+            "projectName": "autolomake",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New car form</title>
+</head>
+<body>
+    <h1>New Car (form)</h1>
+    <form action="#" th:action="@{/savecar}" method="post" th:object="${car}">
+        <label>Brand:</label>
+        <input type="text" th:field="${car.brand}">
+        <label>Year:</label>
+        <input type="text" th:field="${car.year}">
+        <!--to do painike-->
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
