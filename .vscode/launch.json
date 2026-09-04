@@ -60,6 +60,16 @@
             "projectName": "kaverilomake",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BookstoreApplication<bookstore>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "c25.bookstore.BookstoreApplication",
+            "projectName": "bookstore",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
