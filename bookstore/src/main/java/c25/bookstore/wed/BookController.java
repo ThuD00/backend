@@ -31,10 +31,17 @@ public class BookController {
         return "addbook";
     }
 
+    @GetMapping("/edit/{id}")
+    public String editBook(@PathVariable("id") Long bookId, Model model) {
+      Book book = repository.findById(bookId).get();
+      model.addAttribute("book", book);
+        return "editbook";
+    }
+
     @PostMapping("/save")
     public String save(@ModelAttribute Book book){
         repository.save(book);
-        return "redirect:booklist";
+        return "redirect:/booklist";
     } 
 
     @GetMapping("/delete/{id}")
