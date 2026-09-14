@@ -6,6 +6,11 @@
     <title>Result</title>
 </head>
 <body>
-    <h1>Friend added successfully!</h1>
+  <h1>Friend added successfully!</h1>
+     <table>
+      <td th:text="${friend.firstName}"></td>
+      <td th:text="${friend.lastName}"></td>
+    </table>
+    <p><a th:href="@{/friends}">Friend List</a></p>
 </body>
 </html>

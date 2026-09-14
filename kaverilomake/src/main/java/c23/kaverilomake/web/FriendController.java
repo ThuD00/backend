@@ -34,7 +34,7 @@ public class FriendController {
     @PostMapping("/addfriend")
     public String saveAddFriend(@ModelAttribute Friend friend) {
         friends.add(friend);
-        return "redirect:/friends";
+        return "result";
     }
 }
 
