@@ -13,22 +13,29 @@
       <input type="text" id="title" th:field="*{title}" />
 			<div style="clear: both; display: block; height: 10px;"></div>
 
-		  <label for="title">Author</label>
+		  <label for="author">Author</label>
       <input type="text" id="author" th:field="*{author}" />
 			<div style="clear: both; display: block; height: 10px;"></div>
 
-		  <label for="title">Publication Year</label>
+		  <label for="publicationYear">Publication Year</label>
       <input type="text" id="publicationYear" th:field="*{publicationYear}" />
 			<div style="clear: both; display: block; height: 10px;"></div>
 
-      <label for="title">ISBN</label>
+      <label for="isbn">ISBN</label>
       <input type="text" id="isbn" th:field="*{isbn}" />
 			<div style="clear: both; display: block; height: 10px;"></div>
 
-      <label for="title">Price</label>
+      <label for="price">Price</label>
       <input type="text" id="price" th:field="*{price}" />
 			<div style="clear: both; display: block; height: 10px;"></div>
-      
+
+      <label for="category">Category</label>
+      <!-- drop down list -->
+			<select id="category" th:field="*{category}" class="form-control">
+        <option th:each="cate: ${categories}" th:value="${cate.categoryid}" th:text="${cate.name}"></option>
+      </select>
+      <div style="clear: both; display: block; height: 10px;"></div>
+
 			<input type="submit" value="Save"></input>
 		</form>
 	</div>
