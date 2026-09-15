@@ -25,23 +25,20 @@ public class BookstoreApplication {
 	public CommandLineRunner bookDemo(BookRepository brepository, CategoryRepository crepository) {
 		return (args) -> {
       log.info("save a couple books");
-			brepository.save(new Book("The Hobbit", "J.R.R. Tolkien", 1937, "9780261102217", 15.90));
-			brepository.save(new Book("Harry Potter", "J.K. Rowling", 1997, "9780747532699", 12.50));
-			brepository.save(new Book("1984", "George Orwell", 1949, "9780451524935", 10.90));
+      Category category1 = new Category("Fantasy");
+      crepository.save(category1);
+      Category category2 = new Category("Thriller");
+      crepository.save(category2);
+      Category category3 = new Category("Action");
+      crepository.save(category3);
+
+			brepository.save(new Book("The Hobbit", "J.R.R. Tolkien", 1937, "9780261102217", 15.90, category1));
+			brepository.save(new Book("Harry Potter", "J.K. Rowling", 1997, "9780747532699", 12.50, category3));
+			brepository.save(new Book("1984", "George Orwell", 1949, "9780451524935", 10.90, category2));
 		
       log.info("fetch all books");
 		  for (Book book : brepository.findAll()) {
 				log.info(book.toString());
-			}
-
-      log.info("save some categories");
-      crepository.save(new Category("Fantasy"));
-      crepository.save(new Category("Thriller"));
-      crepository.save(new Category("Action"));
-
-      log.info("fetch all categories");
-		  for (Category category : crepository.findAll()) {
-				log.info(category.toString());
 			}
       
 		};
