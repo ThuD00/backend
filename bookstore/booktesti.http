@@ -1,0 +1,5 @@
+### Kaikki kirjat
+GET http://localhost:8080/rest/books
+
+### Yksi kirja
+GET http://localhost:8080/rest/books/1

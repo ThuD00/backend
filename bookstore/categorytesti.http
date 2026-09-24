@@ -1,0 +1,5 @@
+### Kaikki kategorit
+GET http://localhost:8080/rest/categories
+
+### Yksi kirja
+GET http://localhost:8080/rest/categories/1

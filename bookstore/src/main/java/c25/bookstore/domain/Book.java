@@ -1,5 +1,7 @@
 package c25.bookstore.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,6 +21,9 @@ public class Book {
     private Double price;
 
     @ManyToOne
+    //avoid infinite loop during JSON serialization/
+    //deserialization with bidirectional relationships
+    @JsonIgnoreProperties ("books")
     @JoinColumn(name = "categoryid")
     private Category category;
 
