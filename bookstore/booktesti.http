@@ -1,5 +1,34 @@
 ### Kaikki kirjat
-GET http://localhost:8080/rest/books
+GET http://localhost:8080/api/books
 
 ### Yksi kirja
-GET http://localhost:8080/rest/books/1
+GET http://localhost:8080/api/books/1
+
+### Lisää uusi kirja
+POST http://localhost:8080/api/books
+Content-Type: application/json
+
+{
+    "title": "Harry Potter and the Chamber of Secrets",
+    "author": "J.K. Rowling",
+    "publicationYear": 1998,
+    "isbn": "9780747532699",
+    "price": 19.90,
+    "category": "http://localhost:8080/api/categories/3"
+}
+
+### Muokkaa kirjaa
+PUT http://localhost:8080/api/books/2
+Content-Type: application/json
+
+{
+    "title": "The Hobbit Updated",
+    "author": "J.R.R. Tolkien",
+    "publicationYear": 1937,
+    "isbn": "9780261102217",
+    "price": 20.90,
+    "category": "http://localhost:8080/api/categories/2"
+}
+
+### Poista kirja
+DELETE http://localhost:8080/api/books/2

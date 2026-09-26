@@ -1,5 +1,29 @@
 ### Kaikki kategorit
-GET http://localhost:8080/rest/categories
+GET http://localhost:8080/api/categories
 
-### Yksi kirja
-GET http://localhost:8080/rest/categories/1
+### Hae kategori
+GET http://localhost:8080/api/categories/4
+
+### Lisää uusi kategori
+POST http://localhost:8080/api/categories
+Content-Type: application/json
+
+{
+    "name": "Supernatural"
+}
+
+### Muokkaa kategoria
+PUT http://localhost:8080/api/books/1
+Content-Type: application/json
+
+{
+    "title": "The Hobbit Updated",
+    "author": "J.R.R. Tolkien",
+    "publicationYear": 1937,
+    "isbn": "9780261102217",
+    "price": 20.90,
+    "category": "http://localhost:8080/api/categories/2"
+}
+
+### Poista kategori
+DELETE http://localhost:8080/api/categories/4
