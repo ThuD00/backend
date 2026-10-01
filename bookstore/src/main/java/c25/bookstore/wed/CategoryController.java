@@ -34,4 +34,6 @@ public class CategoryController {
       categoryRepository.save(category);
       return "redirect:/categorylist";
     } 
+
+  //delete toiminto?
 }
